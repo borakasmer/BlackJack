@@ -38,6 +38,7 @@ namespace WebServices.Controllers
                 return model != null ? model.Cash : 500;
             }
         }
+        [HttpPost]
         [EnableCors(origins: "*", headers: "*", methods: "*")]
         public void Post(Data _data)
         {
@@ -48,11 +49,21 @@ namespace WebServices.Controllers
                 model.CreatedDate = DateTime.Now;
                 if (_data.isWin)
                 {
-                    model.Cash += _data.putCache;
+                    if (_data.putCache <= model.Cash)
+                    {
+                        model.Cash += _data.putCache;
+                    }                    
                 }
                 else
                 {
-                    model.Cash -= _data.putCache;
+                    if (_data.putCache <= model.Cash)
+                    {
+                        model.Cash -= _data.putCache;
+                    }
+                    else
+                    {
+                        model.Cash = 0;
+                    }
                 }
                 model.Win = _data.isWin;
                 dbContext.SaveChanges();
