@@ -1,0 +1,66 @@
+D:\Projects\21Games\21Games\21Games\bin\roslyn\csc.exe
+D:\Projects\21Games\21Games\21Games\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\21Games\21Games\21Games\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\21Games\21Games\21Games\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\21Games\21Games\21Games\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\21Games\21Games\21Games\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\21Games\21Games\21Games\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\21Games\21Games\21Games\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\21Games\21Games\21Games\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\21Games\21Games\21Games\bin\roslyn\vbc.exe
+D:\Projects\21Games\21Games\21Games\bin\roslyn\VBCSCompiler.exe
+D:\Projects\21Games\21Games\21Games\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\21Games\21Games\21Games\bin\21Games.dll.config
+D:\Projects\21Games\21Games\21Games\bin\21Games.dll
+D:\Projects\21Games\21Games\21Games\bin\21Games.pdb
+D:\Projects\21Games\21Games\21Games\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\21Games\21Games\21Games\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Helpers.dll
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Mvc.dll
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Razor.dll
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Webpages.Deployment.dll
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Webpages.dll
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Webpages.Razor.dll
+D:\Projects\21Games\21Games\21Games\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Razor.xml
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Webpages.xml
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Webpages.Deployment.xml
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Webpages.Razor.xml
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Helpers.xml
+D:\Projects\21Games\21Games\21Games\bin\System.Web.Mvc.xml
+D:\Projects\21Games\21Games\21Games\obj\Release\21Games.csprojResolveAssemblyReference.cache
+D:\Projects\21Games\21Games\21Games\obj\Release\21Games.dll
+D:\Projects\21Games\21Games\21Games\obj\Release\21Games.pdb
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\csc.exe
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\vbc.exe
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\VBCSCompiler.exe
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\21Games.dll.config
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\21Games.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\21Games.pdb
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Helpers.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Mvc.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Razor.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Webpages.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Webpages.Razor.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Razor.xml
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Webpages.xml
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Webpages.Razor.xml
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Helpers.xml
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\bin\System.Web.Mvc.xml
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\obj\Release\21Games.csprojResolveAssemblyReference.cache
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\obj\Release\21Games.dll
+C:\Users\Bora KASMER\Documents\Visual Studio 2017\Projects\21Games\21Games\obj\Release\21Games.pdb

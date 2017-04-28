@@ -1,0 +1,370 @@
+﻿@model Int32
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+	<link href="~/Content/cards.css?v=5" rel="stylesheet" />
+	<link href="~/Content/token.css" rel="stylesheet" />
+	<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".money").hover(function () {
+				$(this).css('cursor', 'pointer');
+            });
+
+			$(".money").click(function () {
+				var cache = parseInt($("#cash").val());
+				var perCache = parseInt($("#putCash").val());
+				var per = parseInt($(this).attr("value"));
+				if (cache > 0 && cache >= per) {
+					$("#cash").val(cache - per);
+					$("#putCash").val(perCache + per);
+					$("#enter").removeAttr('disabled');
+				}
+            });
+		});
+       
+		function PostData(_isWin) {
+			var _data = {
+				"putCache": parseInt($("#putCash").val()),
+				"session": $("#hdnSession").val(),
+				"isWin": _isWin
+			};
+
+			/*var _putCache = parseInt($("#putCash").val());
+			var _session = $("#hdnSession").val();
+			var dataJSON = { "putCache": _putCache, "session": _session, "isWin": _isWin };			*/
+
+			$.ajax({
+				type: 'POST',
+                url: 'http://blackjackservice.azurewebsites.net/api/bank/',
+				data: JSON.stringify(_data),
+				contentType: "application/json; charset=utf-8",
+				traditional: true,
+				success: function () {
+					if (_isWin) {
+						alert("Player 1 Kazandı.");
+						location.href = location.href;
+					}
+					else {
+						alert("Masa Kazandı..");
+						location.href = location.href;
+					}
+				}
+			});
+		}
+		function GetNewCard(player) {
+			$.post("/Home/GetRandomCardHtml", { Player: player }, function (data) {
+				if (player == 3) {
+					$("#cardContainer").append(data);
+					//Check Data
+					$('#score').val(0);
+					$('#cardContainer').children('img').map(function () {
+						if (parseInt($(this).attr('value')) == 1) {
+							var scr = parseInt($('#score').val()) + 11 > 21 ? parseInt($('#score').val()) + 1 : parseInt($('#score').val()) + 11;
+							$('#score').val(scr);
+						}
+						else {
+							var scr = parseInt($('#score').val()) + parseInt($(this).attr('value'));
+							$('#score').val(scr);
+						}
+						if (parseInt($('#score').val()) > 21) {
+							PostData(false);
+							//alert("Player 1 Kaybetti..")
+							//							alert("Masa Kazandı..");
+							//alert("Table Kazandı..")
+							//							location.href = location.href;
+						}
+						else if (parseInt($('#score').val()) == 21) {
+							PostData(true);
+							//alert("Player 1 Kazandı..")
+							//							alert("Player 1 Kazandı.");
+							//							location.href = location.href;
+						}
+					});
+				}
+				else if (player == 1) {
+					$(".money").off('click');
+					$("#enterButton").hide();
+					$("#newCardButton").show();
+					$("#cardContainer").append(data);
+					//First Time
+					$('#score').val(0);
+					$('#cardContainer').children('img').map(function () {
+						if (parseInt($(this).attr('value')) == 1) {
+							var scr = parseInt($('#score').val()) + 11 > 21 ? parseInt($('#score').val()) + 1 : parseInt($('#score').val()) + 11;
+							$('#score').val(scr);
+						}
+						else {
+							var scr = parseInt($('#score').val()) + parseInt($(this).attr('value'));
+							$('#score').val(scr);
+						}
+					});
+					//Second Time
+					$.post("/Home/GetRandomCardHtml", { Player: player }, function (data) {
+						$("#cardContainer").append(data);
+						//Check Data
+						$('#score').val(0);
+						$('#cardContainer').children('img').map(function () {
+							if (parseInt($(this).attr('value')) == 1) {
+								var scr = parseInt($('#score').val()) + 11 > 21 ? parseInt($('#score').val()) + 1 : parseInt($('#score').val()) + 11;
+								$('#score').val(scr);
+							}
+							else {
+								var scr = parseInt($('#score').val()) + parseInt($(this).attr('value'));
+								$('#score').val(scr);
+							}
+						});
+						if (parseInt($('#score').val()) > 21) {
+							PostData(false);
+							//alert("Player 1 Kaybetti..")
+							//alert("Masa Kazandı..")
+							//							alert("Masa Kazandı..");
+							//							location.href = location.href;
+						}
+						else if (parseInt($('#score').val()) == 21) {
+							PostData(true);
+							//alert("Player 1 Kazandı..")
+							//							alert("Player 1 Kazandı..");
+							//							location.href = location.href;
+						}
+					});
+					//
+					//Table Cards
+					$.post("/Home/GetRandomCardHtml", { Player: 2 }, function (data) {
+						$("#cardContainer2").append(data);
+						//Check Data
+						$('#score2').val(0);
+						$('#cardContainer2').children('img').map(function () {
+							if (parseInt($(this).attr('value')) == 1) {
+								var scr = parseInt($('#score2').val()) + 11 > 21 ? parseInt($('#score2').val()) + 1 : parseInt($('#score2').val()) + 11;
+								$('#score2').val(scr);
+							}
+							else {
+								var scr = parseInt($('#score2').val()) + parseInt($(this).attr('value'));
+								$('#score2').val(scr);
+							}
+						});
+					});
+					//
+				}
+				else if (player == 2) {
+					$("#cardContainer2").append(data);
+					//Check Data
+					$('#score2').val(0);
+					$('#cardContainer2').children('img').map(function () {
+						if (parseInt($(this).attr('value')) == 1) {
+							var scr = parseInt($('#score2').val()) + 11 > 21 ? parseInt($('#score2').val()) + 1 : parseInt($('#score2').val()) + 11;
+							$('#score2').val(scr);
+						}
+						else {
+							var scr = parseInt($('#score2').val()) + parseInt($(this).attr('value'));
+							$('#score2').val(scr);
+						}
+						if (parseInt($('#score2').val()) > 21) {
+							PostData(true);
+							//alert("Player 2 Kaybetti..")
+							//alert("Player 1 Kazandı..")
+							//							alert("Player 1 Kazandı..");
+							//							location.href = location.href;
+						}
+						else if (parseInt($('#score2').val()) == 21) {
+							PostData(false);
+							//alert("Masa Kazandı..")
+							//							alert("Masa Kazandı..");
+							//							location.href = location.href;
+						}
+					});
+				}
+
+			});
+		}
+		function Stay() {
+			$.post("/Home/GetRandomCardHtml", { Player: 2 }, function (data) {
+				$("#cardContainer2").append(data);
+				//Check Data
+				$('#score2').val(0);
+				$('#cardContainer2').children('img').map(function () {
+					if (parseInt($(this).attr('value')) == 1) {
+						var scr = parseInt($('#score2').val()) + 11 > 21 ? parseInt($('#score2').val()) + 1 : parseInt($('#score2').val()) + 11;
+						$('#score2').val(scr);
+					}
+					else {
+						var scr = parseInt($('#score2').val()) + parseInt($(this).attr('value'));
+						$('#score2').val(scr);
+					}
+				});
+				if (parseInt($('#score2').val()) > 21) {
+					PostData(true);
+					//alert("Player 2 Kaybetti..")
+					//					alert("Player 1 Kazandı..");
+					//					location.href = location.href;
+				}
+				else if (parseInt($('#score2').val()) == 21 || parseInt($('#score2').val()) > parseInt($('#score').val())) {
+					PostData(false);
+					//alert("Masa Kazandı..")
+					//					alert("Masa Kazandı..");
+					//					location.href = location.href;
+				}
+				else if (parseInt($('#score2').val()) == parseInt($('#score').val())) {
+					//alert("Oyun Ortada..")
+					alert("Oyun Ortada..");
+					location.href = location.href;
+				}
+				if (parseInt($('#score2').val()) < 21 && parseInt($('#score2').val()) < parseInt($('#score').val())) {
+					var delay = 500; //0.5 seconds
+
+					setTimeout(function () {
+						//console.log("Time:" + $.now());
+						Stay();
+					}, delay);
+				}
+			});
+		}
+	</script>
+</head>
+<body style="background-image: url('../Images/bg.jpg');">
+	<input type="hidden" id="hdnSession" value="@ViewBag.Session" />
+    
+    <table id="viewporttable">
+        <tr>
+            <td class="firstcolumn">
+                <div id="cardContainer">
+                    <img src="~/Images/dec.jpg" width="74" height="98" value="0" />
+                </div>
+            </td>
+            <td class="column"></td>
+            <td class="column">
+                <div id="cardContainer2">
+                    <img src="~/Images/dec.jpg" width="74" height="98" value="0" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><div style="position:relative; min-height:20px;"><hr style="position:absolute; width:100vw;" /></div></td>
+        </tr>
+        <tr>
+            <td class="firstcolumn">
+                <div>
+
+                    <div id="enterButton">
+                        <input type="button" onclick="GetNewCard(1)" value="Oyuna Gir" disabled="disabled" id="enter">&nbsp;&nbsp;
+                        <input type="button" onclick="Cancel()" value="İptal" id="cancel">
+                    </div>
+                    <div id="newCardButton" style="display:none">
+                        <input type="button" onclick="GetNewCard(3)" value="Yeni Kart Çek" id="newCard">&nbsp;&nbsp;
+                        <input type="button" onclick="Stay()" value="Kal" id="stay">
+                    </div>
+                    <table id="moneycontainer">
+                        <tr>
+                            <td colspan="2" style="padding-top:20px;">
+                                <div style="color:red">Player 1 Score:</div>
+                                <input type="text" readonly id="score" value="0" style="font-size:100px; color:red; width:120px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table id="divToken">
+                                    <tr>
+                                        <td><image class="token1 money" id="tk1" value="1"></image></td>
+                                        <td><image class="token5 money" id="tk5" value="5"></image></td>
+                                        <td><image class="token10 money" id="tk10" value="10"></image></td>
+                                    </tr>
+                                    <tr>
+                                        <td><image class="token25 money" id="tk25" value="25"></image></td>
+                                        <td><image class="token50 money" id="tk50" value="50"></image></td>
+                                        <td><image class="token100 money" id="tk100" value="100"></image></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <div style="color:white; margin-left:60px;">
+                                    Kasadaki Para(TL):<br />
+                                    <input type="text" readonly id="cash" value="@Model" style="font-size:50px; color:green; width:130px" /><br /><br />
+                                    Ortaya Konan<br />
+                                    <input type="text" readonly id="putCash" value="0" style="font-size:50px; color:blue; width:130px" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td class="column"><!--<img src="~/Images/casino.jpg" class="displayed" />-->
+                <div class="middleimagecontainer">
+                    <img src="~/Images/casino.jpg" class="middleimage" />
+                </div>
+            </td>
+            <td class="column" style="vertical-align:top; padding-top: 40px;">
+                <div style="color:red">Masa Score:</div>
+                <input type="text" readonly id="score2" value="0" style="font-size:100px; color:red; width:120px" />
+            </td>
+        </tr>
+    </table>
+	
+
+
+</body>
+</html>
+
+
+@*<image class="spritesA"></image>
+	<image class="sprites2"></image>
+	<image class="sprites3"></image>
+	<image class="sprites4"></image>
+	<image class="sprites5"></image>
+	<image class="sprites6"></image>
+	<image class="sprites7"></image>
+	<image class="sprites8"></image>
+	<image class="sprites9"></image>
+	<image class="sprites10"></image>
+	<image class="spritesB"></image>
+	<image class="spritesK"></image>
+	<image class="spritesP"></image>
+	<br />
+	<image class="spritemA"></image>
+	<image class="spritem2"></image>
+	<image class="spritem3"></image>
+	<image class="spritem4"></image>
+	<image class="spritem5"></image>
+	<image class="spritem6"></image>
+	<image class="spritem7"></image>
+	<image class="spritem8"></image>
+	<image class="spritem9"></image>
+	<image class="spritem10"></image>
+	<image class="spritemB"></image>
+	<image class="spritemK"></image>
+	<image class="spritemP"></image>
+	<br />
+	<image class="spritekA"></image>
+	<image class="spritek2"></image>
+	<image class="spritek3"></image>
+	<image class="spritek4"></image>
+	<image class="spritek5"></image>
+	<image class="spritek6"></image>
+	<image class="spritek7"></image>
+	<image class="spritek8"></image>
+	<image class="spritek9"></image>
+	<image class="spritek10"></image>
+	<image class="spritekB"></image>
+	<image class="spritekK"></image>
+	<image class="spritekP"></image>
+	<br />
+	<image class="spritekaA"></image>
+	<image class="spriteka2"></image>
+	<image class="spriteka3"></image>
+	<image class="spriteka4"></image>
+	<image class="spriteka5"></image>
+	<image class="spriteka6"></image>
+	<image class="spriteka7"></image>
+	<image class="spriteka8"></image>
+	<image class="spriteka9"></image>
+	<image class="spriteka10"></image>
+	<image class="spritekaB"></image>
+	<image class="spritekaK"></image>
+	<image class="spritekaP"></image>*@

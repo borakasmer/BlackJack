@@ -1,0 +1,10 @@
+D:\Projects\21Games\21Games\DAL\bin\Release\DAL.dll.config
+D:\Projects\21Games\21Games\DAL\bin\Release\DAL.dll
+D:\Projects\21Games\21Games\DAL\bin\Release\DAL.pdb
+D:\Projects\21Games\21Games\DAL\bin\Release\EntityFramework.dll
+D:\Projects\21Games\21Games\DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\21Games\21Games\DAL\bin\Release\EntityFramework.xml
+D:\Projects\21Games\21Games\DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\21Games\21Games\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\Projects\21Games\21Games\DAL\obj\Release\DAL.dll
+D:\Projects\21Games\21Games\DAL\obj\Release\DAL.pdb

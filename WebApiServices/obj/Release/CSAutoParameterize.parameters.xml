@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BlackJackContext-Web.config Connection String" description="BlackJackContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:sqegwqwh6b.database.windows.net,1433;Database=LuckyDB;User ID=borsoft@sqegwqwh6b;Password=AspNet55;Trusted_Connection=False;Encrypt=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Projects\\21Games\\21Games\\WebApiServices\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BlackJackContext']/@connectionString" />
+  </parameter>
+</parameters>

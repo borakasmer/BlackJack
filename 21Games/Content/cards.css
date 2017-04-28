@@ -1,0 +1,327 @@
+﻿body { overflow:hidden; }
+#viewporttable { width: 90vw; }
+#viewporttable tr td.firstcolumn { width: 20vw; }
+#viewporttable tr td.column{width:30vw;}
+#divToken { max-width:200px; }
+
+.middleimagecontainer {
+    position:relative;
+}
+
+.middleimage {
+    position: absolute;
+    margin-top: 20px;
+    width: 40vw;
+}
+
+.spritesA {
+    background: url('/Images/cards.png') no-repeat;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites2 {
+    background: url('/Images/cards.png') no-repeat -73px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites3 {
+    background: url('/Images/cards.png') no-repeat -146px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites4 {
+    background: url('/Images/cards.png') no-repeat -219px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites5 {
+    background: url('/Images/cards.png') no-repeat -292px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites6 {
+    background: url('/Images/cards.png') no-repeat -365px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites7 {
+    background: url('/Images/cards.png') no-repeat -438px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites8 {
+    background: url('/Images/cards.png') no-repeat -511px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites9 {
+    background: url('/Images/cards.png') no-repeat -584px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.sprites10 {
+    background: url('/Images/cards.png') no-repeat -657px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritesB {
+    background: url('/Images/cards.png') no-repeat -730px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritesK {
+    background: url('/Images/cards.png') no-repeat -803px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritesP {
+    background: url('/Images/cards.png') no-repeat -876px 0px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritemA {
+    background: url('/Images/cards.png') no-repeat 0px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem2 {
+    background: url('/Images/cards.png') no-repeat -73px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem3 {
+    background: url('/Images/cards.png') no-repeat -146px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem4 {
+    background: url('/Images/cards.png') no-repeat -219px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem5 {
+    background: url('/Images/cards.png') no-repeat -292px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem6 {
+    background: url('/Images/cards.png') no-repeat -365px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem7 {
+    background: url('/Images/cards.png') no-repeat -438px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem8 {
+    background: url('/Images/cards.png') no-repeat -511px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem9 {
+    background: url('/Images/cards.png') no-repeat -584px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritem10 {
+    background: url('/Images/cards.png') no-repeat -657px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritemB {
+    background: url('/Images/cards.png') no-repeat -730px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritemK {
+    background: url('/Images/cards.png') no-repeat -803px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritemP {
+    background: url('/Images/cards.png') no-repeat -876px -98px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritekA {
+    background: url('/Images/cards.png') no-repeat 0px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek2 {
+    background: url('/Images/cards.png') no-repeat -73px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek3 {
+    background: url('/Images/cards.png') no-repeat -146px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek4 {
+    background: url('/Images/cards.png') no-repeat -219px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek5 {
+    background: url('/Images/cards.png') no-repeat -292px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek6 {
+    background: url('/Images/cards.png') no-repeat -365px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek7 {
+    background: url('/Images/cards.png') no-repeat -438px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek8 {
+    background: url('/Images/cards.png') no-repeat -511px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek9 {
+    background: url('/Images/cards.png') no-repeat -584px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritek10 {
+    background: url('/Images/cards.png') no-repeat -657px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritekB {
+    background: url('/Images/cards.png') no-repeat -730px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritekK {
+    background: url('/Images/cards.png') no-repeat -803px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritekP {
+    background: url('/Images/cards.png') no-repeat -876px -196px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritekaA {
+    background: url('/Images/cards.png') no-repeat 0px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka2 {
+    background: url('/Images/cards.png') no-repeat -73px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka3 {
+    background: url('/Images/cards.png') no-repeat -146px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka4 {
+    background: url('/Images/cards.png') no-repeat -219px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka5 {
+    background: url('/Images/cards.png') no-repeat -292px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka6 {
+    background: url('/Images/cards.png') no-repeat -365px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka7 {
+    background: url('/Images/cards.png') no-repeat -438px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka8 {
+    background: url('/Images/cards.png') no-repeat -511px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka9 {
+    background: url('/Images/cards.png') no-repeat -584px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spriteka10 {
+    background: url('/Images/cards.png') no-repeat -657px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritekaB {
+    background: url('/Images/cards.png') no-repeat -730px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritekaK {
+    background: url('/Images/cards.png') no-repeat -803px -294px;
+    width: 74px;
+    height: 98px;
+}
+
+.spritekaP {
+    background: url('/Images/cards.png') no-repeat -876px -294px;
+    width: 74px;
+    height: 98px;
+}
